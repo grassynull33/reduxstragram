@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 import { configure, history } from "./config/configure-store";
 
 // Data
-import posts from './data/posts';
+import posts from './data/postsLocal';
 import comments from './data/comments';
 
 const defaultState = {

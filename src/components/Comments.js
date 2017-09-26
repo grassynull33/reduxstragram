@@ -28,17 +28,16 @@ class Comments extends Component {
     this.refs.commentForm.reset();
   }
 
-  handleRemove() {
-    console.log("bitch");
-  }
-
   render() {
     return (
-      <div className="Comments">
-        {this.props.postComments.map(this.renderComment)}
-        <form ref="commentForm" onSubmit={(event) => this.handleSubmit(event)}>
-          <input type="text" ref="user" placeholder="user" />
-          <input type="text" ref="comment" placeholder="comment" />
+      <div className="comments">
+        <div className="Comments">
+          <h3>Comments</h3>
+          {this.props.postComments.map(this.renderComment)}
+        </div>
+        <form ref="commentForm" onSubmit={(event) => this.handleSubmit(event)} className="commentForm">
+          <input className="comment-input" type="text" ref="user" placeholder="user" />
+          <input className="comment-input" type="text" ref="comment" placeholder="comment" />
           <input type="submit" hidden />
         </form>
       </div>

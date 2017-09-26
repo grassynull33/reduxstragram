@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900');
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
 .App {
-  background: #253031;
+  background: #F7F7F2;
+  color: #253031;
   min-height: 100vh;
 }
 
@@ -9,15 +16,22 @@
   grid-gap: 0.8em 0.8em;
   padding: 1.3em;
   box-sizing: border-box;
+  background: #253031;
+  min-height: 100vh;
 }
 
-.Photo-likes, .Photo-details, .Photo-likes {
+.Photo-likes,
+.Photo-details {
   display: none;
 }
 
 .Photo {
-  border: 3px solid #4E6766;
+  border: 3px solid #4e6766;
   overflow: hidden;
+}
+
+.Photo:active, .Photo:hover, .Photo:focus {
+  border: 3px solid #E4E6C3;
 }
 
 .Photo-link {
@@ -27,6 +41,74 @@
 
 .Photo-photo {
   width: 100%;
+}
+
+.UserInfo {
+  background: #4e6766;
+  border-bottom: 1px solid rgba(228, 230, 195, 0.12);
+  display: flex;
+  color: #e4e6c3;
+}
+
+.User-photo {
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.50);
+}
+
+.User-detail {
+  padding: 1em 1.3em 0 1.3em;
+}
+
+.User-name {
+  font-size: 18px;
+}
+
+.User-bio {
+  font-size: 10px;
+  font-weight: 300;
+  margin: 0.8em 0;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.User-icon {
+  width: 18px;
+  height: auto;
+  margin-right: 6px;
+}
+
+.User-add-icon {
+  width: 24px;
+  height: auto;
+  border-radius: 50%;
+  background: #89b6a5;
+  opacity: 0.4;
+}
+
+.User-add-icon:hover,
+.User-add-icon:active,
+.User-add-icon:focus {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.User-add {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.User-stat {
+  font-size: 22px;
+  margin-right: 18px;
+  opacity: 0.4;
+}
+
+.User-stat:hover,
+.User-stat:active,
+.User-stat:focus {
+  opacity: 1;
 }
 
 .example-enter {
@@ -45,4 +127,175 @@
 .example-leave.example-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
+}
+
+.Single {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Single .Photo {
+  border: none;
+}
+
+.Single .Photo-photo {
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.50);
+}
+
+.Single .Photo-details {
+  display: block;
+  padding: 20px;
+  background: #4e6766;
+  color: #e4e6c3;
+}
+
+.Single .Photo-button-like-icon {
+  display: inline;
+  width: 26px;
+  height: auto;
+  margin-right: 8px;
+  position: relative;
+  top: -1px;
+}
+
+.Single .Photo-speech-bubble {
+  width: 26px;
+  height: auto;
+  margin-right: 8px;
+  position: relative;
+  top: -1px;
+}
+
+.Single .Photo-caption {
+  font-weight: 300;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 2em;
+  line-height: 1.4;
+}
+
+.Single .Photo-caption-user {
+  font-weight: 400;
+  opacity: 1;
+  margin-right: 0.4em;
+}
+
+.Single .Photo-button-like {
+  font-size: 24px;
+  opacity: 0.5;
+  width: 50%;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Single .Photo-button-comments {
+  font-size: 24px;
+  text-decoration: none;
+  color: #e4e6c3;
+  opacity: 0.5;
+  width: 50%;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Single .Photo-button-like:active,
+.Single .Photo-button-like:hover,
+.Single .Photo-button-like:focus {
+  opacity: 1;
+  color: #e4e6c3;
+  cursor: pointer;
+}
+
+.Single .Photo-button-comments:active,
+.Single .Photo-button-comments:hover,
+.Single .Photo-button-comments:focus {
+  font-size: 24px;
+  text-decoration: none;
+  color: #e4e6c3;
+  opacity: 1;
+}
+
+.Single .Photo-control {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Single .Comments {
+  background: #F7F7F2;
+  padding: 25px 20px;
+  font-size: 13px;
+  flex: 1;
+}
+
+.Single .comments {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.Single .Comments h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  margin-bottom: 1em;
+}
+
+.Single .comment:not(:last-child) {
+  margin-bottom: 0.6em;
+}
+
+.Single .comment {
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.Single .comment strong {
+  font-weight: 400;
+  margin-right: 0.6em;
+}
+
+.Single .remove-comment {
+  background: none;
+  border: none;
+  font-size: 13px;
+  opacity: 0.15;
+}
+
+.Single .remove-comment:active, .Single .remove-comment:hover, .Single .remove-comment:focus {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.Single .commentForm input {
+  background: none;
+  border: none;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #4E6766;
+  border-bottom: 1px solid #4E6766;
+  width: 100%;
+  padding: 0.5em 0;
+}
+
+.Single .comment-input {
+  display: block;
+}
+
+.Single .comment-input:first-child {
+  margin-bottom: 1em;
+}
+
+.Single .comment-input::placeholder {
+  opacity: 0.6;
+  color: #4E6766;
+}
+
+.Single .commentForm {
+  background: #89B6A5;
+  padding: 20px 20px 30px 20px;
 }
