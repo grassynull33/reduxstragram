@@ -3,7 +3,7 @@ import "./reset.css";
 import "./App.css";
 
 // NPM Modules
-import { Route, Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
 // Components
@@ -21,8 +21,10 @@ class App extends Component {
           <Link to="/">Reduxstragram</Link>
         </h1>
 
-        <Route exact path="/" component={PhotoGrid} />
-        <Route exact path="/view/:id" component={Single} />
+        <Switch>
+          <Route exact path="/" component={PhotoGrid} />
+          <Route exact path="/view/:id" component={Single} />
+        </Switch>
       </div>
     );
   }
