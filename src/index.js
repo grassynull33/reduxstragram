@@ -8,7 +8,16 @@ import { ConnectedRouter } from "react-router-redux";
 import { Provider } from "react-redux";
 import { configure, history } from "./config/configure-store";
 
-const store = configure();
+// Data
+import posts from './data/posts';
+import comments from './data/comments';
+
+const defaultState = {
+  posts,
+  comments
+};
+
+const store = configure(defaultState);
 
 ReactDOM.render(
   <Provider store={store}>
