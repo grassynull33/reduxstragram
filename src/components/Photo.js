@@ -8,7 +8,7 @@ class Photo extends Component {
 
     return (
       <div className="Photo">
-        <Link to={`/view/${post.code}`}>
+        <Link className="Photo-link" to={`/view/${post.code}`}>
           <img src={post.display_src} alt={post.caption} className="Photo-photo"/>
         </Link>
 
