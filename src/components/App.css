@@ -28,10 +28,12 @@ body {
 .Photo {
   border: 3px solid #4e6766;
   overflow: hidden;
+  background: #4e6766;
 }
 
 .Photo:active, .Photo:hover, .Photo:focus {
   border: 3px solid #E4E6C3;
+  background: #E4E6C3;
 }
 
 .Photo-link {
@@ -298,4 +300,84 @@ body {
 .Single .commentForm {
   background: #89B6A5;
   padding: 20px 20px 30px 20px;
+}
+
+@media only screen and (min-width : 768px) {
+  .User-name {
+    font-size: 22px;
+  }
+
+  .User-bio {
+    font-size: 12px;
+    margin: 0.8em 0;
+  }
+
+  .User-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+  }
+  
+  .User-add-icon {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+    background: #89b6a5;
+    opacity: 0.4;
+  }
+
+  .User-stat {
+    font-size: 26px;
+    margin-right: 18px;
+  }
+}
+
+@media only screen and (min-width : 992px) {
+  .PhotoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2em 2em;
+    padding: 2em;
+  }
+  
+  .Single .Photo {
+    display: flex;
+  }
+
+  .Single .Photo-link {
+    width: 61.8vw;
+  }
+
+  .Single .Photo-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  .Single .Photo-caption {
+    font-size: 20px;
+  }
+
+  .Single .Comments {
+    font-size: 1.2em;
+    padding: 40px;
+  }
+
+  .Single .Comments h3 {
+    font-size: 1.2em;
+  }
+
+  .Single .commentForm {
+    padding: 40px 40px 50px 40px;
+  }
+
+  .Single .commentForm input {
+    font-size: 1.2em;
+  }
+
+  .Single .remove-comment {
+    font-size: 1.2em;
+  }
 }
