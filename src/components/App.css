@@ -345,7 +345,8 @@ body {
   }
 
   .Single .Photo-link {
-    width: 61.8vw;
+    height: 100vh;
+    width: auto;
   }
 
   .Single .Photo-details {
