@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Reduxstragram",
+  "name": "Reduxstragram",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +8,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "./200.html",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#F7F7F2",
+  "background_color": "#F7F7F2"
 }
